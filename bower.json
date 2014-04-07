@@ -1,0 +1,28 @@
+{
+  "name": "pitimi",
+  "version": "1.0.0",
+  "homepage": "https://github.com/zekle/pitimi",
+  "authors": [
+    "Rubens Mariuzzo <rubens@mariuzzo.com>"
+  ],
+  "description": "Pitimi; Public Talk Manager web app primarily intended to be used by JW.",
+  "keywords": [
+    "pitimi",
+    "public",
+    "talk",
+    "manager",
+    "jw"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1"
+  }
+}
