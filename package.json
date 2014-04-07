@@ -1,0 +1,25 @@
+{
+  "name": "pitimi",
+  "version": "1.0.0",
+  "description": "Pitimi; Public Talk Manager web app primarily intended to be used by JW.",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/zekle/pitimi"
+  },
+  "keywords": [
+    "pitimi",
+    "public",
+    "talk",
+    "manager",
+    "jw"
+  ],
+  "author": "rubens@mariuzzo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zekle/pitimi/issues"
+  }
+}
