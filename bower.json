@@ -24,5 +24,8 @@
   ],
   "dependencies": {
     "jquery": "1"
+  },
+  "devDependencies": {
+    "almond": "~0.2.9"
   }
 }
