@@ -6,6 +6,8 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
 
+        pkg: grunt.file.readJSON('package.json'),
+
         watch: {
             serve: {
                 files: [
@@ -14,7 +16,7 @@ module.exports = function(grunt) {
                     'public/assets/js/**/*',
                     'public/assets/img/**/*'
                 ],
-                tasks: ['jshint', 'sass:dev'],
+                tasks: ['jshint', 'sass:serve'],
                 options: {
                     livereload: 8009
                 }
@@ -50,7 +52,7 @@ module.exports = function(grunt) {
             compile: {
                 options: {
                     baseUrl: './public/assets/js/',
-                    name: '../public/bower_components/almond/almond',
+                    name: '../bower_components/almond/almond',
                     include: ['main'],
                     insertRequire: ['main'],
                     mainConfigFile: './public/assets/js/config.js',
@@ -103,6 +105,6 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('serve', ['jshint', 'sass:serve', 'concurrent']);
-    grunt.registerTask('build', ['jshint', 'sass:build']);
+    grunt.registerTask('build', ['jshint', 'sass:build', 'requirejs:compile']);
     grunt.registerTask('default', ['serve']);
 };
