@@ -14,7 +14,8 @@ module.exports = function(grunt) {
                     'Gruntfile.js',
                     'public/assets/scss/**/*',
                     'public/assets/js/**/*',
-                    'public/assets/img/**/*'
+                    'public/assets/img/**/*',
+                    'app/**/*'
                 ],
                 tasks: ['jshint', 'sass:serve'],
                 options: {
