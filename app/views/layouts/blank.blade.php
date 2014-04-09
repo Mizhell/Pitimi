@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>{{{ $title or '' }}}</title>
     @section('head')
-    @show
+    @stop
+    @include('layouts.partials.head')
 </head>
 <body>
     @yield('content')
