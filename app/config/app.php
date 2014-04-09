@@ -17,6 +17,8 @@ return array(
 
 	'assets_debug' => false,
 
+	'name' => 'Pitimi',
+
 	/*
 	|--------------------------------------------------------------------------
 	| Application URL

@@ -1,0 +1,48 @@
+
+form {
+    .form-row {
+        margin: 20px 0;
+    }
+}
+
+label {
+    height: 34px;
+    line-height: 34px;
+}
+
+input {
+    color: #A3A199;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+input[type=text],
+input[type=password] {
+    @include border-radius(3px);
+    border: #E3E0D6 solid 2px;
+    height: 34px;
+    padding: 0 15px;
+    background-color: #fff !important;
+
+    &:hover {
+        border-color: #A3A199;
+    }
+
+    &:focus {
+        border-color: #F87E47;
+        outline: none;
+    }
+}
+
+.button {
+    @include border-radius(3px);
+    font-weight: bold;
+    font-size: 13px;
+    border: 0;
+    padding: 10px 20px;
+
+    &.button-primary {
+        background-color: #F87E47;
+        color: white;
+    }
+}

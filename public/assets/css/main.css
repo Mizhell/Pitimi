@@ -1,2 +1,79 @@
 body {
   background: url("../img/bg.png") repeat; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 20px 0; }
+
+.box {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 20px; }
+  .box .box-header {
+    background-color: #F4CC54;
+    margin: -20px -20px 20px -20px;
+    padding: 20px; }
+
+form .form-row {
+  margin: 20px 0; }
+
+label {
+  height: 34px;
+  line-height: 34px; }
+
+input {
+  color: #A3A199;
+  font-weight: bold;
+  font-size: 13px; }
+
+input[type=text], input[type=password] {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: #E3E0D6 solid 2px;
+  height: 34px;
+  padding: 0 15px;
+  background-color: #fff !important; }
+  input[type=text]:hover, input[type=password]:hover {
+    border-color: #A3A199; }
+  input[type=text]:focus, input[type=password]:focus {
+    border-color: #F87E47;
+    outline: none; }
+
+.button {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 13px;
+  border: 0;
+  padding: 10px 20px; }
+  .button.button-primary {
+    background-color: #F87E47;
+    color: white; }
+
+#login {
+  width: 400px;
+  margin: 100px auto; }
+  #login label {
+    width: 30%; }
+  #login input {
+    width: 70%;
+    float: right; }
