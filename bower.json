@@ -26,6 +26,7 @@
     "jquery": "1"
   },
   "devDependencies": {
-    "almond": "~0.2.9"
+    "almond": "~0.2.9",
+    "requirejs": "2"
   }
 }

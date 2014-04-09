@@ -89,6 +89,8 @@ module.exports = function(grunt) {
             }
         },
 
+        /* Image processing */
+
         imagemin: {
             all: {
                 options: {
