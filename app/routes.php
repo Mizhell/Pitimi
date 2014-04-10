@@ -24,3 +24,8 @@ Route::get('/login', array(
 Route::post('/login', array(
     'uses' => 'AuthController@processLogin'
 ));
+
+Route::get('/logout', array(
+    'as' => 'logout',
+    'uses' => 'AuthController@showLogout'
+));

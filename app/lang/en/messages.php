@@ -9,5 +9,8 @@ return array(
     'congregations' => 'Congregations',
     'talks' => 'Talks',
     'loggedAs' => 'Logged as:',
+    'badUsernameOrPassword' => 'Bad username or password.',
+    'successfullyLoggedOut' => 'You have been successfully logged out.',
+    'welcome' => 'Welcome',
 
 );

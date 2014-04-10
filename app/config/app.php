@@ -19,6 +19,8 @@ return array(
 
 	'name' => 'Pitimi',
 
+    'description' => 'Pitimi; Public Talk Manager.',
+
 	/*
 	|--------------------------------------------------------------------------
 	| Application URL

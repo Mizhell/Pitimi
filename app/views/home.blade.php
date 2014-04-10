@@ -2,14 +2,9 @@
 
 @section('content')
 
-    <div class="container">
-
-        <h1>Hello World!</h1>
-
-        <p>Salut Monde!</p>
-
-        {{{ App::environment() }}}
-
+    <div class="container box">
+        <h2>{{{ trans('messages.welcome') }}}</h2>
+        <p>{{{ Config::get('app.description') }}}</p>
     </div>
 
 @stop

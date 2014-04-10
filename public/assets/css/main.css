@@ -23,11 +23,17 @@ body {
 
 body, input, textarea, select {
   font-family: 'Merriweather';
-  font-size: 13px;
+  font-size: 14px;
   color: #3B3B3B; }
 
 p {
   margin: 20px 0; }
+
+a {
+  color: #000;
+  text-decoration: underline; }
+  a:hover {
+    text-decoration: none; }
 
 /* Box */
 .box {
@@ -108,7 +114,7 @@ label {
   line-height: 34px; }
 
 input {
-  color: #A3A199;
+  color: #777;
   font-weight: bold;
   font-size: 13px; }
 
