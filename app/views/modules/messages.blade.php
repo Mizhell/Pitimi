@@ -5,19 +5,20 @@
 ?>
 
 
+<div class="messages">
+    @if ($messages instanceof Illuminate\Support\MessageBag)
 
-@if ($messages instanceof Illuminate\Support\MessageBag)
+        @foreach($messages->getMessages() as $type => $contents)
 
-    @foreach($messages->getMessages() as $type => $contents)
+            <ul class="{{{ $type }}}">
 
-        <ul>
+            @foreach($contents as $content)
+                <li>{{{ $content }}}</li>
+            @endforeach
 
-        @foreach($contents as $content)
-            <li><strong>{{{ print_r($type, true) }}}</strong> {{{ print_r($content, true) }}}</li>
+            </ul>
+
         @endforeach
 
-        </ul>
-
-    @endforeach
-
-@endif
+    @endif
+</div>

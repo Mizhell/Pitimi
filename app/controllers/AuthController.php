@@ -18,7 +18,7 @@ class AuthController extends BaseController {
 
         try {
             UserService::authenticate($username, $password);
-            return Redirect::intended('home');
+            return Redirect::intended('/');
         } catch (ServiceException $e) {
             Log::info($e->getMessage());
         } catch (Exception $e) {
