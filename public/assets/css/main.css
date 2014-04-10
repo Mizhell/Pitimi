@@ -10,9 +10,20 @@ body {
   margin: 0;
   padding: 0; }
 
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather'), url(../fonts/Merriweather.woff) format('woff'); }
+
+body, input, textarea, select {
+  font-family: 'Merriweather';
+  font-size: 13px; }
+
 p {
   margin: 20px 0; }
 
+/* Box */
 .box {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -27,8 +38,42 @@ p {
     margin: -20px -20px 20px -20px;
     padding: 20px; }
 
+/* Buttons */
+.button, .button-primary {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  font-weight: bold;
+  font-size: 13px;
+  border: 0;
+  padding: 10px 20px;
+  cursor: pointer; }
+
+.button-primary {
+  background-color: #F87E47;
+  color: white; }
+  .button-primary:hover {
+    background-color: #EC7944; }
+  .button-primary:active {
+    background-color: #FF854E; }
+
 form .form-row {
+  overflow: hidden;
+  *zoom: 1;
   margin: 20px 0; }
+  form .form-row:last-child {
+    margin-bottom: 0; }
 
 label {
   height: 34px;
@@ -45,6 +90,15 @@ input[type=text], input[type=password] {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
+  -webkit-transition-property: border;
+  -moz-transition-property: border;
+  -o-transition-property: border;
+  transition-property: border;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
   border: #E3E0D6 solid 2px;
   height: 34px;
   padding: 0 15px;
@@ -55,25 +109,16 @@ input[type=text], input[type=password] {
     border-color: #F87E47;
     outline: none; }
 
-.button {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  font-weight: bold;
-  font-size: 13px;
-  border: 0;
-  padding: 10px 20px; }
-  .button.button-primary {
-    background-color: #F87E47;
-    color: white; }
-
 #login {
   width: 400px;
   margin: 100px auto; }
+  #login h2 {
+    color: #fff; }
   #login label {
-    width: 30%; }
+    width: 30%;
+    float: left;
+    display: block; }
   #login input {
     width: 70%;
-    float: right; }
+    float: right;
+    display: block; }

@@ -1,4 +1,19 @@
 
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Merriweather'), url(../fonts/Merriweather.woff) format('woff');
+}
+
+body,
+input,
+textarea,
+select {
+    font-family: 'Merriweather';
+    font-size: 13px;
+}
+
 p {
     margin: 20px 0;
 }

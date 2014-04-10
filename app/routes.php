@@ -20,3 +20,7 @@ Route::get('/login', array(
     'as' => 'login',
     'uses' => 'AuthController@showLogin'
 ));
+
+Route::post('/login', array(
+    'uses' => 'AuthController@processLogin'
+));

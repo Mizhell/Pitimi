@@ -3,12 +3,19 @@
     width: 400px;
     margin: 100px auto;
 
+    h2 {
+        color: #fff;
+    }
+
     label {
         width: 30%;
+        float: left;
+        display: block;
     }
 
     input {
         width: 70%;
         float: right;
+        display: block;
     }
 }

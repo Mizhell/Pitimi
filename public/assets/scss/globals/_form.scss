@@ -1,9 +1,15 @@
 
 form {
     .form-row {
+        @include clearfix;
         margin: 20px 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
+
 
 label {
     height: 34px;
@@ -19,6 +25,8 @@ input {
 input[type=text],
 input[type=password] {
     @include border-radius(3px);
+    @include transition-property(border);
+    @include transition-duration(.2s);
     border: #E3E0D6 solid 2px;
     height: 34px;
     padding: 0 15px;
@@ -31,18 +39,5 @@ input[type=password] {
     &:focus {
         border-color: #F87E47;
         outline: none;
-    }
-}
-
-.button {
-    @include border-radius(3px);
-    font-weight: bold;
-    font-size: 13px;
-    border: 0;
-    padding: 10px 20px;
-
-    &.button-primary {
-        background-color: #F87E47;
-        color: white;
     }
 }
