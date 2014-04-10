@@ -32,6 +32,10 @@ class BaseController extends Controller {
         $this->messages('error', $message);
     }
 
+    protected function setMenu($menu) {
+        Session::flash('menu', $menu);
+    }
+
     private function messages($key, $message)
     {
         $messages = Session::get('messages');

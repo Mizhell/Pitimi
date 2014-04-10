@@ -2,4 +2,45 @@
 header {
     margin-top: 20px;
     margin-bottom: 20px;
+
+    h1 {
+        display: block;
+    }
+
+    nav {
+        margin: 20px 0;
+
+        ul {
+            @include inline-block-list;
+            @include border-radius(4px);
+            background-color: #fff;
+
+            li a {
+                display: block;
+                padding: 15px 30px;
+                color: #3B3B3B;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    color: #000;
+                }
+
+                &:active {
+                    background-color: #F2F1EE;
+                }
+
+                &.selected {
+                    background-color: #F2F1EE;
+                    padding-bottom: 12px;
+                    border-bottom: 3px solid #F87C46;
+                    color: #F87C46;
+                }
+            }
+        }
+    }
+
+    .greetings {
+        float: right;
+    }
 }

@@ -2,6 +2,10 @@
 
 class HomeController extends BaseController {
 
+    public function __construct() {
+        $this->setMenu('home');
+    }
+
 	public function showHome()
 	{
 		if (Auth::check()) {
