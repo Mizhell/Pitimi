@@ -25,7 +25,8 @@ class AuthController extends BaseController {
             Log::error($e->getMessage());
         }
 
-        return Redirect::route('/')->withInput(Input::only('username'));
+        $this->warning(Lang::get('badUsernameOrPassword'));
+        return Redirect::route('login')->withInput(Input::only('username'));
 
     }
 

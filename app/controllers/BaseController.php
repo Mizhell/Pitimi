@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\MessageBag as MessageBag;
+
 class BaseController extends Controller {
 
 	/**
@@ -14,5 +16,31 @@ class BaseController extends Controller {
 			$this->layout = View::make($this->layout);
 		}
 	}
+
+    protected function success($message)
+    {
+        $this->messages('success', $message);
+    }
+
+    protected function warning($message)
+    {
+        $this->messages('warning', $message);
+    }
+
+    protected function error($message)
+    {
+        $this->messages('error', $message);
+    }
+
+    private function messages($key, $message)
+    {
+        $messages = Session::get('messages');
+        if ( ! ($messages instanceof MessageBag))
+        {
+            $messages = new MessageBag;
+        }
+        $messages->add($key, $message);
+        Session::flash('messages', $messages);
+    }
 
 }
