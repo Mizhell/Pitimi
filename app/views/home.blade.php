@@ -1,11 +1,15 @@
-@extends('layouts.blank')
+@extends('layouts.default')
 
 @section('content')
 
-    <h1>Hello World!</h1>
+    <div class="container">
 
-    <p>Salut Monde!</p>
+        <h1>Hello World!</h1>
 
-    {{{ App::environment() }}}
+        <p>Salut Monde!</p>
+
+        {{{ App::environment() }}}
+
+    </div>
 
 @stop
