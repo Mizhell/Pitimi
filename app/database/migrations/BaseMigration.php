@@ -16,13 +16,21 @@ class BaseMigration extends Migration
      *
      * @return void
      */
-    protected function addCommonsTo($tableName) {
+    protected function addCommonsTo($tableName, $nullable = false) {
         // Add common columns.
-        Schema::table($tableName, function($table)
+        Schema::table($tableName, function($table) use ($nullable)
         {
             $table->timestamps();
-            $table->integer('created_by')->unsigned()->nullable();
-            $table->integer('updated_by')->unsigned()->nullable();
+            if ($nullable)
+            {
+                $table->integer('created_by')->unsigned()->nullable();
+                $table->integer('updated_by')->unsigned()->nullable();
+            }
+            else
+            {
+                $table->integer('created_by')->unsigned();
+                $table->integer('updated_by')->unsigned();
+            }
         });
         // Add common relationships.
         Schema::table($tableName, function($table)

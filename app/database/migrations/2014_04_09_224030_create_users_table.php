@@ -23,7 +23,7 @@ class CreateUsersTable extends BaseMigration {
             $table->integer('role_id')->unsigned();
         });
 
-        $this->addCommonsTo('users');
+        $this->addCommonsTo('users', true);
     }
 
     /**

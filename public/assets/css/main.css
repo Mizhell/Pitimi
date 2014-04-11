@@ -81,7 +81,7 @@ a {
     background-color: #FF854E; }
 
 /* Messages */
-.messages ul {
+.message, .messages ul {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -89,18 +89,22 @@ a {
   border-radius: 4px;
   list-style-type: none;
   border-width: 2px;
-  border-style: solid; }
-  .messages ul li {
+  border-style: solid;
+  margin: 20px 0; }
+  .message li, .messages ul li {
     margin: 10px 20px; }
-  .messages ul.success {
+  .message.success, .messages ul.success {
     border-color: #18BB9C;
     background-color: #CBF3DB; }
-  .messages ul.warning {
+  .message.warning, .messages ul.warning {
     border-color: #F39C11;
     background-color: #FBF0C3; }
-  .messages ul.error {
+  .message.error, .messages ul.error {
     border-color: #E84C3D;
     background-color: #FADBD8; }
+
+.message {
+  padding: 10px 20px; }
 
 form .form-row {
   overflow: hidden;

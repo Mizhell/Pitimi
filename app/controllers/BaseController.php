@@ -32,8 +32,24 @@ class BaseController extends Controller {
         $this->messages('error', $message);
     }
 
-    protected function setMenu($menu) {
+    protected function setMenu($menu)
+    {
         Session::flash('menu', $menu);
+    }
+
+    protected function unexpected(Exception $e)
+    {
+        if ($e instanceof ServiceException)
+        {
+            Log::warn($e->getMessage());
+        }
+        else
+        {
+            Log::error($e->getMessage());
+        }
+
+        $this->error(trans('messages.unexpectedError'));
+        return Redirect::route('home');
     }
 
     private function messages($key, $message)

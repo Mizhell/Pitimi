@@ -43,11 +43,13 @@
 
 /* Messages */
 
+.message,
 .messages ul {
     @include border-radius(4px);
     list-style-type: none;
     border-width: 2px;
     border-style: solid;
+    margin: 20px 0;
 
     li {
         margin: 10px 20px;
@@ -67,4 +69,8 @@
         border-color: #E84C3D;
         background-color: #FADBD8;
     }
+}
+
+.message {
+    padding: 10px 20px;
 }

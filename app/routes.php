@@ -11,21 +11,29 @@
 |
 */
 
-Route::get('/', array(
-    'as' => 'home',
-    'uses' => 'HomeController@showHome'
-));
 
-Route::get('/login', array(
+Route::get('login', array(
     'as' => 'login',
     'uses' => 'AuthController@showLogin'
 ));
 
-Route::post('/login', array(
+Route::post('login', array(
     'uses' => 'AuthController@processLogin'
 ));
 
-Route::get('/logout', array(
-    'as' => 'logout',
-    'uses' => 'AuthController@showLogout'
-));
+/* Secured paths */
+
+Route::group(array('before' => 'auth'), function()
+{
+    Route::get('/', array('as' => 'home', 'uses' => 'HomeController@showHome'));
+    Route::get('logout', array('as' => 'logout', 'uses' => 'AuthController@showLogout'));
+
+    Route::get('congregations', array(
+        'uses' => 'CongregationController@showCongregations',
+        'as'   => 'congregations.list'
+    ));
+    Route::get('congregation/create', array(
+        'uses' => 'CongregationController@createCongregation',
+        'as'   => 'congregations.create'
+    ));
+});
