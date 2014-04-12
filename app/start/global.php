@@ -31,7 +31,13 @@ ClassLoader::addDirectories(array(
 |
 */
 
-Log::useFiles(storage_path().'/logs/laravel.log');
+Log::useFiles(storage_path().'/logs/pitimi.log');
+$monolog = Log::getMonolog();
+$monolog->pushProcessor(function ($record) {
+    $record['extra']['user'] = Auth::user() ? Auth::user()->username : 'anonymous';
+    $record['extra']['ip'] = Request::getClientIp();
+    return $record;
+});
 
 /*
 |--------------------------------------------------------------------------
