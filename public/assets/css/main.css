@@ -51,7 +51,7 @@ a {
     padding: 20px; }
 
 /* Buttons */
-.button, .button-primary {
+input[type=submit], button, .button {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -70,15 +70,21 @@ a {
   font-size: 13px;
   border: 0;
   padding: 10px 20px;
-  cursor: pointer; }
-
-.button-primary {
-  background-color: #F87E47;
-  color: white; }
-  .button-primary:hover {
-    background-color: #EC7944; }
-  .button-primary:active {
-    background-color: #FF854E; }
+  cursor: pointer;
+  text-decoration: none;
+  color: #777;
+  background-color: #EEEDE6; }
+  input[type=submit]:hover, button:hover, .button:hover {
+    background-color: #e8e6dd; }
+  input[type=submit]:active, button:active, .button:active {
+    background-color: #f4f4ef; }
+  input[type=submit].primary, button.primary, .button.primary {
+    color: #fff;
+    background-color: #F87E47; }
+    input[type=submit].primary:hover, button.primary:hover, .button.primary:hover {
+      background-color: #f77238; }
+    input[type=submit].primary:active, button.primary:active, .button.primary:active {
+      background-color: #f98756; }
 
 /* Messages */
 .message, .messages ul {
@@ -90,7 +96,7 @@ a {
   list-style-type: none;
   border-width: 2px;
   border-style: solid;
-  margin: 20px 0; }
+  margin-top: 20px; }
   .message li, .messages ul li {
     margin: 10px 20px; }
   .message.success, .messages ul.success {
@@ -106,12 +112,10 @@ a {
 .message {
   padding: 10px 20px; }
 
-form .form-row {
+form .form-controls, form .form-buttons {
   overflow: hidden;
   *zoom: 1;
-  margin: 20px 0; }
-  form .form-row:last-child {
-    margin-bottom: 0; }
+  margin-top: 20px; }
 
 label {
   height: 34px;
@@ -122,7 +126,7 @@ input {
   font-weight: bold;
   font-size: 13px; }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], select {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -141,9 +145,9 @@ input[type=text], input[type=password] {
   height: 34px;
   padding: 0 15px;
   background-color: #fff !important; }
-  input[type=text]:hover, input[type=password]:hover {
+  input[type=text]:hover, input[type=password]:hover, select:hover {
     border-color: #A3A199; }
-  input[type=text]:focus, input[type=password]:focus {
+  input[type=text]:focus, input[type=password]:focus, select:focus {
     border-color: #F87E47;
     outline: none; }
 
@@ -206,10 +210,29 @@ footer {
   #login h2 {
     color: #fff; }
   #login label {
-    width: 30%;
     float: left;
-    display: block; }
-  #login input {
-    width: 70%;
-    float: right;
-    display: block; }
+    display: block;
+    width: 30%; }
+  #login .form-buttons {
+    margin-left: 30%; }
+  #login .form-controls input, #login .form-controls select, #login .form-controls textarea {
+    float: left;
+    display: block;
+    width: 70%; }
+  #login .form-buttons input[type=submit], #login .form-buttons input[type=button], #login .form-buttons input[type=reset], #login .form-buttons button {
+    width: auto; }
+  #login .form-buttons input {
+    width: 100% !important; }
+
+.page-congregations label {
+  float: left;
+  display: block;
+  width: 20%; }
+.page-congregations .form-buttons {
+  margin-left: 20%; }
+.page-congregations .form-controls input, .page-congregations .form-controls select, .page-congregations .form-controls textarea {
+  float: left;
+  display: block;
+  width: 40%; }
+.page-congregations .form-buttons input[type=submit], .page-congregations .form-buttons input[type=button], .page-congregations .form-buttons input[type=reset], .page-congregations .form-buttons button {
+  width: auto; }

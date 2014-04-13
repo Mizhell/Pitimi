@@ -7,15 +7,10 @@
         color: #fff;
     }
 
-    label {
-        width: 30%;
-        float: left;
-        display: block;
-    }
+    @include form-labels(30%);
+    @include form-controls(70%);
 
-    input {
-        width: 70%;
-        float: right;
-        display: block;
+    .form-buttons input {
+        width: 100% !important;
     }
 }

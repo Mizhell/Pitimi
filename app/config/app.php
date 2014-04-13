@@ -45,7 +45,7 @@ return array(
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'America/Santo_Domingo',
 
 	/*
 	|--------------------------------------------------------------------------

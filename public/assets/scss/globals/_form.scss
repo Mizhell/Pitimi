@@ -1,12 +1,10 @@
 
 form {
-    .form-row {
-        @include clearfix;
-        margin: 20px 0;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
+    .form-controls,
+    .form-buttons {
+        @include clearfix;
+        margin-top: 20px;
     }
 }
 
@@ -23,7 +21,8 @@ input {
 }
 
 input[type=text],
-input[type=password] {
+input[type=password],
+select {
     @include border-radius(3px);
     @include transition-property(border);
     @include transition-duration(.2s);
@@ -39,5 +38,36 @@ input[type=password] {
     &:focus {
         border-color: #F87E47;
         outline: none;
+    }
+}
+
+// Mixins //
+
+@mixin form-labels($width) {
+    label {
+        float: left;
+        display: block;
+        width: $width;
+    }
+
+    .form-buttons {
+        margin-left: $width;
+    }
+}
+
+@mixin form-controls($width) {
+    .form-controls input,
+    .form-controls select,
+    .form-controls textarea {
+        float: left;
+        display: block;
+        width: $width;
+    }
+
+    .form-buttons input[type=submit],
+    .form-buttons input[type=button],
+    .form-buttons input[type=reset],
+    .form-buttons button {
+        width: auto;
     }
 }

@@ -20,7 +20,10 @@ class CongregationController extends BaseController {
 
     public function createCongregation()
     {
-        return View::make('congregations.create');
+        $data = array(
+            'weekdays' => DateService::getWeekdays(),
+        );
+        return View::make('congregations.create', $data);
     }
 
 }

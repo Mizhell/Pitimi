@@ -16,6 +16,8 @@
 
 /* Buttons */
 
+input[type=submit],
+button,
 .button {
     @include border-radius(3px);
     @include transition-property(background-color);
@@ -25,21 +27,34 @@
     border: 0;
     padding: 10px 20px;
     cursor: pointer;
-}
+    text-decoration: none;
 
-.button-primary {
-    @extend .button;
-    background-color: #F87E47;
-    color: white;
+    color: #777;
+    background-color: #EEEDE6;
 
     &:hover {
-        background-color: #EC7944;
+        background-color: darken(#EEEDE6, 3%);
     }
 
     &:active {
-        background-color: #FF854E
+        background-color: lighten(#EEEDE6, 3%);
+    }
+
+    &.primary {
+        color: #fff;
+        background-color: #F87E47;
+
+        &:hover {
+            background-color: darken(#F87E47, 3%);
+        }
+
+        &:active {
+            background-color: lighten(#F87E47, 3%);
+        }
     }
 }
+
+
 
 /* Messages */
 
@@ -49,7 +64,7 @@
     list-style-type: none;
     border-width: 2px;
     border-style: solid;
-    margin: 20px 0;
+    margin-top: 20px;
 
     li {
         margin: 10px 20px;

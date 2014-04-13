@@ -8,16 +8,16 @@
         <p>{{{ Lang::get('messages.pleaseLogin') }}}</p>
         {{ Form::open(array('autocomplete' => 'off')) }}
             {{ Form::token() }}
-            <div class="form-row">
+            <div class="form-controls">
                 {{ Form::label('username') }}
                 {{ Form::text('username') }}
             </div>
-            <div class="form-row">
+            <div class="form-controls">
                 {{ Form::label('password') }}
                 {{ Form::password('password') }}
             </div>
-            <div class="form-row">
-                {{ Form::submit('Login', array('class' => 'button button-primary')) }}
+            <div class="form-buttons">
+                {{ Form::submit('Login', array('class' => 'primary')) }}
             </div>
         {{ Form::close() }}
     </div>
