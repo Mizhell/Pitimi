@@ -33,7 +33,11 @@ Route::group(array('before' => 'auth'), function()
         'as'   => 'congregations.list'
     ));
     Route::get('congregation/create', array(
-        'uses' => 'CongregationController@createCongregation',
+        'uses' => 'CongregationController@showCreateCongregation',
+        'as'   => 'congregations.create'
+    ));
+    Route::post('congregation/create', array(
+        'uses' => 'CongregationController@processCreateCongregation',
         'as'   => 'congregations.create'
     ));
 });

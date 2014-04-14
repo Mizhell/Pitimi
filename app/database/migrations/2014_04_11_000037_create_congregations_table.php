@@ -16,9 +16,9 @@ class CreateCongregationsTable extends BaseMigration {
             $table->increments('id');
             $table->string('name', 100);
             $table->string('address', 200);
-            $table->integer('pm_day_number');  // Starting on Sunday as 0 to Saturday as 6.
+            $table->integer('pm_day_of_week');  // Starting on Sunday as 0 to Saturday as 6.
             $table->datetime('pm_datetime');
-            $table->integer('cbs_day_number'); // Starting on Sunday as 0 to Saturday as 6.
+            $table->integer('cbs_day_of_week'); // Starting on Sunday as 0 to Saturday as 6.
             $table->datetime('cbs_datetime');
             $table->boolean('is_group');
         });

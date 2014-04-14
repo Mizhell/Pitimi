@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * The DateService class provides all date service operations.
+ */
 class DateService
 {
     /**
@@ -17,7 +20,7 @@ class DateService
 
         for ($i = 0; $i < 7; $i++)
         {
-            $weekdays[$i] = strftime( '%A', strtotime( 'next ' . $firstDayOfWeek . ' +' . $i . ' days' ) );
+            $weekdays[$i] = strftime('%A', strtotime('next ' . $firstDayOfWeek . ' +' . $i . ' days'));
         }
 
         return $weekdays;

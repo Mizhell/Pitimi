@@ -6,6 +6,12 @@ form {
         @include clearfix;
         margin-top: 20px;
     }
+
+    .help {
+        height: 34px;
+        line-height: 34px;
+        margin-left: 20px;
+    }
 }
 
 
@@ -52,6 +58,14 @@ select {
 
     .form-buttons {
         margin-left: $width;
+    }
+
+    .error {
+        color: #EB5B4C;
+        clear: both;
+        display: block;
+        margin-left: $width;
+        padding-top: 10px;
     }
 }
 

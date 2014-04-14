@@ -87,7 +87,7 @@ input[type=submit], button, .button {
       background-color: #f98756; }
 
 /* Messages */
-.message, .messages ul {
+.message ul, .messages ul {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -97,25 +97,26 @@ input[type=submit], button, .button {
   border-width: 2px;
   border-style: solid;
   margin-top: 20px; }
-  .message li, .messages ul li {
+  .message ul li, .messages ul li {
     margin: 10px 20px; }
-  .message.success, .messages ul.success {
+  .message ul.success, .messages ul.success {
     border-color: #18BB9C;
     background-color: #CBF3DB; }
-  .message.warning, .messages ul.warning {
+  .message ul.warning, .messages ul.warning {
     border-color: #F39C11;
     background-color: #FBF0C3; }
-  .message.error, .messages ul.error {
+  .message ul.error, .messages ul.error {
     border-color: #E84C3D;
     background-color: #FADBD8; }
-
-.message {
-  padding: 10px 20px; }
 
 form .form-controls, form .form-buttons {
   overflow: hidden;
   *zoom: 1;
   margin-top: 20px; }
+form .help {
+  height: 34px;
+  line-height: 34px;
+  margin-left: 20px; }
 
 label {
   height: 34px;
@@ -215,6 +216,12 @@ footer {
     width: 30%; }
   #login .form-buttons {
     margin-left: 30%; }
+  #login .error {
+    color: #EB5B4C;
+    clear: both;
+    display: block;
+    margin-left: 30%;
+    padding-top: 10px; }
   #login .form-controls input, #login .form-controls select, #login .form-controls textarea {
     float: left;
     display: block;
@@ -230,6 +237,12 @@ footer {
   width: 20%; }
 .page-congregations .form-buttons {
   margin-left: 20%; }
+.page-congregations .error {
+  color: #EB5B4C;
+  clear: both;
+  display: block;
+  margin-left: 20%;
+  padding-top: 10px; }
 .page-congregations .form-controls input, .page-congregations .form-controls select, .page-congregations .form-controls textarea {
   float: left;
   display: block;
