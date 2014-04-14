@@ -14,7 +14,7 @@ return array(
     'welcome' => 'Welcome',
     'unexpectedError' => 'Sorry, an unexpected error occurred...',
     'noCongregations' => 'There\'s no congregations.',
-    'createOne' => 'Create one.',
+    'createOne' => 'Create one',
     'createCongregation' => 'Create Congregation',
     'datetimeFormat' => 'Format: HH:MM',
     'formErrors' => 'Please, double check forms for errors.',

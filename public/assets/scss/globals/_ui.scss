@@ -58,17 +58,12 @@ button,
 
 /* Messages */
 
-.message ul,
+.message,
 .messages ul {
     @include border-radius(4px);
-    list-style-type: none;
     border-width: 2px;
     border-style: solid;
     margin-top: 20px;
-
-    li {
-        margin: 10px 20px;
-    }
 
     &.success {
         border-color: #18BB9C;
@@ -83,5 +78,17 @@ button,
     &.error {
         border-color: #E84C3D;
         background-color: #FADBD8;
+    }
+}
+
+.message {
+    padding: 10px 20px;
+}
+
+.messages ul {
+    list-style-type: none;
+
+    li {
+        margin: 10px 20px;
     }
 }

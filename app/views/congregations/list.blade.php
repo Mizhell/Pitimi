@@ -10,10 +10,9 @@
         <h2>{{{ trans('messages.congregations') }}}</h2>
         @if (count($congregations))
         @else
-            <div class="message warning">
-                {{{ trans('messages.noCongregations') }}}
-                <a href="{{{ route('congregations.create') }}}">{{{ trans('messages.createOne') }}}</a>
-            </div>
+            {{ HTML::warning(trans('messages.noCongregations')) }}
+            <br>
+            <a class="button primary" href="{{{ route('congregations.create') }}}">{{{ trans('messages.createOne') }}}</a>
         @endif
     </div>
 
