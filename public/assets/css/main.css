@@ -27,7 +27,7 @@ body, input, textarea, select {
   color: #3B3B3B; }
 
 p {
-  margin: 20px 0; }
+  margin: 20px 0 0 0; }
 
 a {
   color: #000;
@@ -44,7 +44,8 @@ a {
   border-radius: 4px;
   overflow: hidden;
   background-color: #fff;
-  padding: 20px; }
+  padding: 20px;
+  margin-top: 20px; }
   .box .box-header {
     background-color: #F4CC54;
     margin: -20px -20px 20px -20px;
@@ -66,6 +67,12 @@ input[type=submit], button, .button {
   -ms-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
   font-weight: bold;
   font-size: 13px;
   border: 0;
@@ -156,6 +163,15 @@ input[type=text], input[type=password], select {
   input[type=text]:focus, input[type=password]:focus, select:focus {
     border-color: #F87E47;
     outline: none; }
+
+table {
+  margin: 20px 0 0 0;
+  width: 100%;
+  border-collapse: collapse; }
+  table th, table td {
+    text-align: left;
+    border: #ccc solid 1px;
+    padding: 10px 20px; }
 
 header {
   margin-top: 20px;
@@ -254,3 +270,6 @@ footer {
   width: 40%; }
 .page-congregations .form-buttons input[type=submit], .page-congregations .form-buttons input[type=button], .page-congregations .form-buttons input[type=reset], .page-congregations .form-buttons button {
   width: auto; }
+.page-congregations .datetime select {
+  width: 10%;
+  margin-right: 20px; }

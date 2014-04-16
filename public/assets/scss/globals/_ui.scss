@@ -6,6 +6,7 @@
     overflow: hidden;
     background-color: #fff;
     padding: 20px;
+    margin-top: 20px;
 
     .box-header {
         background-color: #F4CC54;
@@ -22,6 +23,7 @@ button,
     @include border-radius(3px);
     @include transition-property(background-color);
     @include transition-duration(.2s);
+    @include inline-block;
     font-weight: bold;
     font-size: 13px;
     border: 0;

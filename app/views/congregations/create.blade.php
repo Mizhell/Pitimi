@@ -25,10 +25,10 @@
                 {{ Form::select('pm_day_of_week', $weekdays) }}
                 {{ Form::error('pm_day_of_week') }}
             </div>
-            <div class="form-controls">
+            <div class="form-controls datetime">
                 {{ Form::label('pm_datetime') }}
-                {{ Form::text('pm_datetime') }}
-                <span class="help">{{{ trans('messages.datetimeFormat') }}}</span>
+                {{ Form::select('pm_datetime_hours', $hours) }}
+                {{ Form::select('pm_datetime_minutes', $minutes) }}
                 {{ Form::error('pm_datetime') }}
             </div>
             <div class="form-buttons">

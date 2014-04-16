@@ -25,4 +25,24 @@ class DateService
 
         return $weekdays;
     }
+
+    public static function getHours()
+    {
+        $hours = array();
+        for ($i = 0; $i < 24; $i++)
+        {
+            $hours[$i] = str_pad($i, 2, '0', STR_PAD_LEFT);
+        }
+        return $hours;
+    }
+
+    public static function getMinutes()
+    {
+        $minutes = array();
+        for ($i = 0; $i < 60; $i += 15)
+        {
+            $minutes[$i] = str_pad($i, 2, '0', STR_PAD_LEFT);
+        }
+        return $minutes;
+    }
 }

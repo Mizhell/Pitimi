@@ -18,5 +18,10 @@ return array(
     'createCongregation' => 'Create Congregation',
     'datetimeFormat' => 'Format: HH:MM',
     'formErrors' => 'Please, double check forms for errors.',
+    'congregationCreated' => 'Congregation created successfully!',
+    'id' => 'Id',
+    'name' => 'Name',
+    'address' => 'Address',
+    'actions' => 'Actions',
 
 );

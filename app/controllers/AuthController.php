@@ -16,12 +16,17 @@ class AuthController extends BaseController {
         $username = Input::get('username');
         $password = Input::get('password');
 
-        try {
+        try
+        {
             UserService::authenticate($username, $password);
             return Redirect::intended('/');
-        } catch (ServiceException $e) {
+        }
+        catch (ServiceException $e)
+        {
             Log::info($e->getMessage());
-        } catch (Exception $e) {
+        }
+        catch (Exception $e)
+        {
             Log::error($e->getMessage());
         }
 

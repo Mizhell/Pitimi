@@ -22,6 +22,8 @@ class CongregationController extends BaseController {
     {
         $data = array(
             'weekdays' => DateService::getWeekdays(),
+            'hours' => DateService::getHours(),
+            'minutes' => DateService::getMinutes(),
         );
         return View::make('congregations.create', $data);
     }
@@ -32,15 +34,35 @@ class CongregationController extends BaseController {
         $congregation->name = Input::get('name');
         $congregation->address = Input::get('address');
         $congregation->pm_day_of_week = Input::get('pm_day_of_week');
-        $congregation->pm_datime = Input::get('pm_datime');
+        $congregation->pm_datetime = Input::get('pm_datetime_hours') . ':' . Input::get('pm_datetime_minutes') . ':00';
 
-        $validator = $congregation->getValidator();
-        if ($validator->fails())
+        try
+        {
+            CongregationService::createCongregation($congregation);
+
+            $this->success(trans('messages.congregationCreated'));
+
+            return Redirect::route('congregations.list');
+        }
+        catch (ValidationException $e)
         {
             return Redirect::route('congregations.create')
                 ->withInput(Input::all())
-                ->withErrors($validator);
+                ->withErrors($e->getValidator());
         }
+        catch (ServiceException $e)
+        {
+            Log::info($e->getMessage());
+        }
+        catch (Exception $e)
+        {
+            Log::error($e->getMessage());
+        }
+
+        $this->error(trans('messages.unexpectedError'));
+
+        return Redirect::route('congregations.create')
+            ->withInput(Input::all());
 
     }
 
