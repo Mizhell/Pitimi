@@ -28,10 +28,11 @@
                         </tr>
                     @endforeach
                 </tbody>
-                <tfoot>
-                    {{ $congregations->links() }}
-                </tfoot>
             </table>
+            {{ $congregations->links() }}
+            <p>
+                <a class="button primary" href="{{{ route('congregations.create') }}}">{{{ trans('messages.createCongregation') }}}</a>
+            </p>
         @else
             {{ HTML::warning(trans('messages.noCongregations')) }}
             <p>

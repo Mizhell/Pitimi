@@ -1,4 +1,9 @@
 
+// Variables //
+
+$typography-color: #3B3B3B;
+$typography-highlight-color: #F87C46;
+
 @font-face {
     font-family: 'Merriweather';
     font-style: normal;
@@ -12,7 +17,7 @@ textarea,
 select {
     font-family: 'Merriweather';
     font-size: 14px;
-    color: #3B3B3B;
+    color: $typography-color;
 }
 
 p {

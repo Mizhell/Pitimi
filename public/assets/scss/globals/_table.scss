@@ -2,12 +2,68 @@
 table {
     margin: 20px 0 0 0;
     width: 100%;
-    border-collapse: collapse;
+    // border-collapse: collapse;
+    border-spacing: 0;
+    border: #ccc 2px solid;
+    @include border-radius(4px);
 
-    th,
+    th {
+        color: #A3A199;
+        font-weight: bold;
+        text-align: left;
+        padding: 10px 20px;
+        background-color: #F9F9F6;
+    }
+
     td {
         text-align: left;
-        border: #ccc solid 1px;
+        border-top: #e8e8e8 solid 1px;
         padding: 10px 20px;
+    }
+
+    tbody tr {
+        background-color: #fff;
+
+        &:nth-child(even) {
+            background-color: #FBFBF8;
+        }
+    }
+}
+
+// Pagination //
+
+.pagination {
+    @include inline-block-list;
+    margin-top: 20px;
+
+    li + li {
+        margin-left: 10px;
+    }
+
+    a,
+    span {
+        @include border-radius(4px);
+        display: block;
+        min-width: 30px;
+        min-height: 30px;
+        background-color: #EEEDE6;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        color: #999;
+    }
+
+    .active span {
+        color: $typography-highlight-color;
+        font-weight: bold;
+    }
+
+    a {
+        color: $typography-color;
+        text-decoration: none;
+
+        &:hover {
+            color: #000;
+        }
     }
 }
