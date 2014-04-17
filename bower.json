@@ -23,7 +23,8 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "1"
+    "jquery": "1",
+    "compass-mixins": "~1.0.0"
   },
   "devDependencies": {
     "almond": "~0.2.9",
